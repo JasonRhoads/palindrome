@@ -23,12 +23,18 @@ function Phrase(content) {
   
   this.processor = function(string) {
     return string.toLowerCase();
-  }
+  };
   
   // Returns content processed for palindrome testing.
   this.processedContent = function processedContent() {
     return this.processor(this.content);
-  }
+  };
+
+  // Returns the letters in the content.
+  this.letters = function letters() {
+    return this.content;
+  };
+
   
   // Returns true for a plaindrome, false otherwise.
   this.palindrome = function palindrome() {
