@@ -27,12 +27,15 @@ function Phrase(content) {
   
   // Returns content processed for palindrome testing.
   this.processedContent = function processedContent() {
-    return this.processor(this.content);
+    return this.letters().toLowerCase();
   };
 
   // Returns the letters in the content.
+  // For example:
+  //   new Phrase("Hello, world!").letters() === "Helloworld"
+
   this.letters = function letters() {
-    return this.content;
+    return (this.content.match(/[a-z]/ig) || []).join("");
   };
 
   
